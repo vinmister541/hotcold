@@ -4,14 +4,15 @@ var counter = 0;
 
 $(".new").click(function() {
 	 $("#guessList").empty();
-
+	 $("#count").text(counter=0);
 	 $("#feedback").text("Make your Guess!");
 });
 
+
+
 $('#add').click(function() {
 	var playerInput = $('input#player').val();
-	$("h1").append(computerChoice);
-	
+	$("p2").append(computerChoice);	
 	if( $('input#player').val() > 100 ) {
 				alert ("Please enter a number between 1 and 100 inclusive");
 }
