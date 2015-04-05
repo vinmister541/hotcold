@@ -1,4 +1,6 @@
 $(document).ready(function(){
+var computerChoice = Math.floor((Math.random() * 100) + 1);
+var counter = 0;
 
 $(".new").click(function() {
 	 $("#guessList").empty();
@@ -6,14 +8,8 @@ $(".new").click(function() {
 	 $("#feedback").text("Make your Guess!");
 });
 
-var computerChoice = Math.floor((Math.random() * 100) + 1);
-var playerInput = $('input#player').val();
-
-
-
-
-
 $('#add').click(function() {
+	var playerInput = $('input#player').val();
 	$("h1").append(computerChoice);
 	
 	if( $('input#player').val() > 100 ) {
@@ -21,6 +17,8 @@ $('#add').click(function() {
 }
 	else {
 	$("p4").append(playerInput);
+	counter +=1;
+	$("#count").text(counter);
 }
 
 	
